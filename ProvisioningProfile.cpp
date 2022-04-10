@@ -357,13 +357,13 @@ std::vector<unsigned char> ProvisioningProfile::data() const
 
 timeval ProvisioningProfile::creationDate() const
 {
-	timeval creationDate = { this->_creationDateSeconds, this->_creationDateMicroseconds };
+	timeval creationDate = { this->_creationDateSeconds, static_cast<int>(this->_creationDateMicroseconds) };
     return creationDate;
 }
 
 timeval ProvisioningProfile::expirationDate() const
 {
-	timeval expirationDate = { this->_expirationDateSeconds, this->_expirationDateMicroseconds };
+	timeval expirationDate = { this->_expirationDateSeconds, static_cast<int>(this->_expirationDateMicroseconds) };
 	return expirationDate;
 }
 
