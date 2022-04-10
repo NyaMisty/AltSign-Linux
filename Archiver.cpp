@@ -6,6 +6,7 @@
 //  Copyright © 2019 Riley Testut. All rights reserved.
 //
 
+#include <vector>
 #include <filesystem>
 #include <fstream>
 #include <algorithm>
